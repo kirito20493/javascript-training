@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./test.js"></script>
 </head>
-<body>
-    <div class="wrap">
-        <div class="img">
-            <img id="sliderID" src="./img/product5Item1.png" alt="">
-        </div>
-        
 
-        <div class="button">
-            <button onclick="prev()">PREV</button>
-            <button onclick="next()">NEXT</button>
+<body>
+    <div class="app">
+        <div class="main-menu">
+            <a id="home" href="#">HOME</a>
+            <ul class="main-menu-list">
+                <li onclick="openMenuFe()" class="main-menu-item">
+                    FRONT-END
+                </li>
+                <li onclick="openMenuBe()" class="main-menu-item">
+                    BACK-END
+                </li>
+            </ul>
+
+            <div class="sub-menu-fe">
+                <ul class="sub-menu-fe-list">
+                    <li class="sub-menu-fe-item">
+                        HTML
+                    </li>
+                    <li class="sub-menu-fe-item">
+                        CSS
+                    </li>
+                    <li class="sub-menu-fe-item">
+                        JavaScript
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-menu-be">
+                <ul class="sub-menu-be-list">
+                    <li class="sub-menu-be-item">
+                        NodeJs
+                    </li>
+                    <li class="sub-menu-be-item">
+                        PHP
+                    </li>
+                    <li class="sub-menu-be-item">
+                        JAVA
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div> 
+    </div>
+    <script src="./test.js"></script>
 </body>
+
 </html>

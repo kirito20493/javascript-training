@@ -1,35 +1,10 @@
-var img = ['./img/product5Item1.png','./img/product5Item2.png','./img/product5Item3.png'];
-var num = 0;
-var time = 2000;
-
-function next() {
-    var slider = document.getElementById("sliderID");
-    num++;
-    if(num >= img.length) {
-        num = 0;
-    }
-    slider.src = img[num];
+function openMenuFe(){
+    var elementFE = document.querySelector('.sub-menu-fe');
+    console.log(elementFE);
+    elementFE.classList.toggle('showMenu');
 }
-
-function prev() {
-    var slider = document.getElementById("sliderID");
-    num--;
-    if(num < 0) {
-        num = img.length-1;
-    }
-    slider.src = img[num];
+function openMenuBe(){
+    var elementBE = document.querySelector('.sub-menu-be');
+    console.log(elementBE);
+    elementBE.classList.toggle('showMenu');
 }
-
-function changeImage(){
-    var slider = document.getElementById("sliderID");
-    num++;
-    if(num >= img.length) {
-        num = 0;
-    }
-    slider.src = img[num];
-
-    setTimeout(changeImage,time);
-}
-
-
-
