@@ -13,6 +13,7 @@
     font-size: 4rem;
     color: rgb(188,195,201);
     font-weight: 100;
+    text-align: center;
 }
 ::-webkit-input-placeholder {
     color: rgb(188,195,201);

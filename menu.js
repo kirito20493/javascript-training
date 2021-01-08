@@ -97,3 +97,11 @@ function mouseoverLive(){
     involvedMenu.style.display = 'none';
     mainMenu.style.borderRight = 'none';
 }
+
+// keyboard ESC
+document.onkeydown = function(e){
+    if(e.which == 27){
+        document.getElementById("overlay-menu").style.display = "none";
+        document.getElementById("overlay-search").style.display = "none";
+    }
+};
