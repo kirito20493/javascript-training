@@ -5,242 +5,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.1/css/all.css">
-    <link rel="stylesheet" href="./css/menuOverlay.css">
-    <link rel="stylesheet" href="./css/searchOverlay.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.15.1/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="app">
         <div class="header">
-            <div class="nav__bar">
-                <div class="nav__bar-content">
-                    <button class="overlay-menu-btn" onclick="onOverlayMenu()" class="menu-btn">
-                        <i class="fas fa-bars"></i>
+            <div class="header__logo-navbar">
+                <a href="" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <a href="" class="deliver">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>
+                        Deliver to </br><span>Vietnam</span></p>
+                </a>
+                <div class="logo-navbar-search">
+                    <select class="logo-navbar-search-checkbox" name="" id="">
+                        <option value="1">All</option>
+                        <option value="2">Automotive</option>
+                        <option value="3">Baby</option>
+                    </select>
+                    <input type="text" class="logo-navbar-search-input">
+                    <button class="logo-navbar-search-btn">
+                        <i class="fas fa-search"></i>
                     </button>
-                    <div class="logo">
-                        <img src="./img/logo.png" alt="" class="logo-img">
-                    </div>
-                    <div class="nav__bar-inner">
-                        <ul class="nav__bar-list">
-                            <li class="nav__bar-item">
-                                ECONOMY
-                            </li>
-                            <li class="nav__bar-item">
-                                NATIONAL SECURITY
-                            </li>
-                            <li class="nav__bar-item">
-                                BUDGET
-                            </li>
-                            <li class="nav__bar-item">
-                                IMMIGRATION
-                            </li>
-                            <li class="nav__bar-item">
-                                CORONAVIRUS.GOV
-                            </li>
-                        </ul>
+                </div>
+                <div class="logo-navbar-search-language">
+                    <i class="fas fa-flag-usa"></i>
+                    <i class="fas fa-caret-down"></i>
+                    <div class="logo-navbar-search-language-sub">
+                        <div class="logo-navbar-search-language-sub-selected">
+                            <div class="logo-navbar-search-language-sub-selected-title">
+                                <p>Change language</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                            <div class="logo-navbar-search-language-sub-selected-checkbox">
+                                <input type="checkbox" name="" id="">
+                                <p>English - EN</p>
+                            </div>
+                        </div>
+                        <div class="logo-navbar-search-language-sub-change">
+                            <ul class="logo-navbar-search-language-sub-change-list">
+                                <li class="logo-navbar-search-language-sub-change-item">
+                                    <input type="checkbox" name="" id="">
+                                    <p>VietNamese - VN</p>
+                                </li>
+                                <li class="logo-navbar-search-language-sub-change-item">
+                                    <input type="checkbox" name="" id="">
+                                    <p>Chinese - CN</p>
+                                </li>
+                                <li class="logo-navbar-search-language-sub-change-item">
+                                    <input type="checkbox" name="" id="">
+                                    <p>Japanese - JP</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="nav__bar-search">
-                    <span class="nav__bar-search-title">Search WhiteHouse.gov</span>
-                    <button onclick="onOverlaySearch()" class="nav__bar-search-btn"><i class="fas fa-search"></i></button>
+
+                <a href="#" class="logo-navbar-search-account">
+                    <p>Hello, Sign in </br><span>Account & List</span></p><i class="fas fa-caret-down"></i>
+                </a>
+                <a href="#" class="logo-navbar-search-order">
+                    <p>Returns </br><span>& Order</span></p>
+                </a>
+                <a href="" class="logo-navbar-search-cart">
+                    <i class="fas fa-shopping-cart"></i><span>Cart</span>
+                    <div class="logo-navbar-search-cart-number">
+                        <p>0</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="header__menubar">
+                <div class="menubar-content">
+                    <ul class="menubar-list">
+                        <li id="abc" class="menubar-item">
+                            <i class="fas fa-bars"></i>All
+                        </li>
+                        <li class="menubar-item">
+                            Today's Deals
+                        </li>
+                        <li class="menubar-item">
+                            Customer Service
+                        </li>
+                        <li class="menubar-item">
+                            Gift Cards
+                        </li>
+                        <li class="menubar-item">
+                            Sell
+                        </li>
+                        <li class="menubar-item">
+                            Registry
+                        </li>
+                    </ul>
                 </div>
+                <a href="#" class="menubar-covid">Amazon's response to COVID-19</a>
             </div>
         </div>
-        <!-- menu-overlay -->
-        <div id="overlay-menu">
-            <div class="overlay-menu-header">
-                <button class="overlay-menu-off" onclick="offOverlayMenu()"><i class="fas fa-times"></i></button>
-                <button class="nav__bar-search-btn" onclick="onOverlaySearch()" class="av__bar-search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="overlay-menu-container">
-                <div class="main-menu">
-                    <div class="main-menu-content">
-                        <ul class="main-menu-list">
-                            <li onmouseover="mouseoverNews()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    News
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverIssues()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    Issues
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverAdmin()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    The Administration
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverOffices()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    Excutive Offices
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverAbout()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    About The White House
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverInvolved()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    Get Involved
-                                </p>
-                                <i class="fas fa-caret-right"></i>
-                            </li>
-                            <li onmouseover="mouseoverContact()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    Contact
-                                </p>
-                            </li>
-                            <li onmouseover="mouseoverLive()" class="main-menu-item">
-                                <p class="main-menu-item-title">
-                                    Live
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="news-subMenu">
-                        <ul class="news-subMenu-list">
-                            <li class="news-subMenu-item">
-                                <p class="news-subMenu-item-title">Remarks</p>
-                            </li>
-                            <li class="news-subMenu-item">
-                                <p class="news-subMenu-item-title">Briefings & Statements</p>
-                            </li>
-                            <li class="news-subMenu-item">
-                                <p class="news-subMenu-item-title">Presidential Actions</p>
-                            </li>
-                            <li class="news-subMenu-item">
-                                <p class="news-subMenu-item-title">Articles</p>
-                            </li>
-                            <li class="news-subMenu-item">
-                                <p class="news-subMenu-item-title">All News</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="issues-subMenu">
-                        <ul class="issues-subMenu-list">
-                            <li class="issues-subMenu-item">
-                                <p class="issues-subMenu-item-title">Education</p>
-                            </li>
-                            <li class="issues-subMenu-item">
-                                <p class="issues-subMenu-item-title">National Security & Defense</p>
-                            </li>
-                            <li class="issues-subMenu-item">
-                                <p class="issues-subMenu-item-title">Budget & Spending</p>
-                            </li>
-                            <li class="issues-subMenu-item">
-                                <p class="issues-subMenu-item-title">Healthcare</p>
-                            </li>
-                            <li class="issues-subMenu-item">
-                                <p class="issues-subMenu-item-title">All Issues</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="admin-subMenu">
-                        <ul class="admin-subMenu-list">
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">President Donald J.Trump</p>
-                            </li>
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">Vice President Michael R.Pence</p>
-                            </li>
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">First Lady Melania Trump</p>
-                            </li>
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">Second Lady Karen Pence</p>
-                            </li>
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">The Cabinet</p>
-                            </li>
-                            <li class="admin-subMenu-item">
-                                <p class="admin-subMenu-item-title">Disclosures</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="offices-subMenu">
-                        <ul class="offices-subMenu-list">
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">Countcil of Economic Advisers</p>
-                            </li>
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">Countcil on Environmental Quality</p>
-                            </li>
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">National Security Council</p>
-                            </li>
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">Office of Management and Budget</p>
-                            </li>
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">Office of National Drug Control Policy</p>
-                            </li>
-                            <li class="offices-subMenu-item">
-                                <p class="offices-subMenu-item-title">Office of Science and technology Policy</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="about-subMenu">
-                        <ul class="about-subMenu-list">
-                            <li class="about-subMenu-item">
-                                <p class="about-subMenu-item-title">White House Tour</p>
-                            </li>
-                            <li class="about-subMenu-item">
-                                <p class="about-subMenu-item-title">Past Precidents</p>
-                            </li>
-                            <li class="about-subMenu-item">
-                                <p class="about-subMenu-item-title">Past First Ladies</p>
-                            </li>
-                            <li class="about-subMenu-item">
-                                <p class="about-subMenu-item-title">The Grounds</p>
-                            </li>
-                            <li class="about-subMenu-item">
-                                <p class="about-subMenu-item-title">Our Government</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="involved-subMenu">
-                        <ul class="involved-subMenu-list">
-                            <li class="involved-subMenu-item">
-                                <p class="involved-subMenu-item-title">Write or Call the White House</p>
-                            </li>
-                            <li class="involved-subMenu-item">
-                                <p class="involved-subMenu-item-title">White House Intership Program</p>
-                            </li>
-                            <li class="involved-subMenu-item">
-                                <p class="involved-subMenu-item-title">White House Fellows</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
+        <label class="overlayNav"></label>
+        <div class="menu-wrap-header">
+            <i class="far fa-user-circle"></i>
+            <h3 class="user">
+                Hello, Sign in
+            </h3>
         </div>
-        <!-- search overlay -->
-        <div id="overlay-search">
-            <div class="overlay-search-header">
-                <button class="overlay-search-off" onclick="offOverlaySearch()"><i class="fas fa-times"></i></button>
-                <button class="overlay-menu-btn" onclick="onOverlayMenu()" class="menu-btn"><i class="fas fa-bars"></i></button>
+        <div class="menu-wrap">
+            <!-- <div class="menu-wrap-header">
+                <i class="far fa-user-circle"></i>
+                <h3 class="user">
+                    Hello, Sign in
+                </h3>
+            </div> -->
+            <div class="menu-content">
+                <div class="submenu">
+                    <h2 class="submenu-header">
+                        Digital Content & Devices
+                    </h2>
+                    <ul class="submenu-list">
+                        <li id="1-1" class="submenu-item">
+                            <p>Amazon Music</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Kidle E-reader & Books</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Applestore for Android</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu">
+                    <h2 class="submenu-header">
+                        Shop By Departments
+                    </h2>
+                    <ul class="submenu-list">
+                        <li class="submenu-item">
+                            <p>Electronics</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Computers</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Smart Home</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Arts & Crafts</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p id="show-more">
+                                See All<i class="fas fa-chevron-down"></i>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu">
+                    <h2 class="submenu-header">
+                        Programs & Features
+                    </h2>
+                    <ul class="submenu-list">
+                        <li class="submenu-item">
+                            <p>Gift Cards</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>FoundItOnAmazon</p>
+                        </li>
+                        <li class="submenu-item">
+                            <p>Amazon Live</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p>International Shopping</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="submenu-item">
+                            <p id="show-more">
+                                See All<i class="fas fa-chevron-down"></i>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="overlay-search-container">
-                <input type="text" class="overlay-search-container-input" placeholder="Type Your Search...">
-                <button class="overlay-search-container-btn">PRESS ENTER YOUR SEARCH</button>
+            <div class="submenu-sub-wrap">
+                <div class="submenu-sub-wrap-header">
+                    <i class="fas fa-arrow-left"></i>
+                    <p>MAIN MENU</p>
+                </div>
+                <div class="submenu-sub-wrap-content">
+                    <div class="submenu-sub-wrap-item">
+                        <h2 class="submenu-sub-wrap-item-header">
+                            Stream Music
+                        </h2>
+                        <ul class="submenu-sub-wrap-item-list">
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Amazon Music Unlimited</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Amazon Music HD</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Prime Music</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Free Streaming Music</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Podcasts</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Open Web Play</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="submenu-sub-wrap-item">
+                        <h2 class="submenu-sub-wrap-item-header">
+                            Buy Music
+                        </h2>
+                        <ul class="submenu-sub-wrap-item-list">
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>CDs & Vinyl</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Download Store</p>
+                            </li>
+                            <li class="submenu-sub-wrap-item-link">
+                                <p>Artist Merch Shop</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+        </div>
+
+        <button id="close-btn">X</button>
+        <div id="overlay">
         </div>
     </div>
-
-    <script src="./menu.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
